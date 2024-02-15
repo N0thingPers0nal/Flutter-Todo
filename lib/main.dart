@@ -195,6 +195,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   AppLocalizations.of(context)!.welcome_message("Joy"),
                   style:const TextStyle(fontWeight: FontWeight.w900, fontSize: 30),
                 ),
+                // checking
                 sizedHeightBox(),
                 textDull(AppLocalizations.of(context)!.category_title),
                 sizedHeightBox(),
