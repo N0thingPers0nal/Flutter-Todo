@@ -1,0 +1,13 @@
+{"welcome_message":"Was geht, {username}!",
+"@welcome_message":{"placeholders":{"username":{}}},
+"category_title":"KATEGORIEN",
+"task_title":"TODO'S AUFGABEN",
+"new_task_text_field":"Geben Sie eine neue Aufgabe ein..",
+"create":"Erstellen",
+"calender":"Heute",
+"templete":"Vorlage",
+"categories":"Kategorien",
+"analytics":"Analytik",
+"settings":"Einstellungen",
+"emptyField":"Bitte geben Sie einen Inhalt ein"
+}

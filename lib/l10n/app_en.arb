@@ -1,0 +1,13 @@
+{"welcome_message":"What's up {username}!",
+"@welcome_message":{"placeholders":{"username":{}}},
+"category_title":"CATEGORIES",
+"task_title":"TODO'S TASKS",
+"new_task_text_field":"Enter new task..",
+"create":"Create",
+"calender":"Today",
+"templete":"Template",
+"categories":"Categories",
+"analytics":"Analytics",
+"settings":"Settings",
+"emptyField":"Please enter some content"
+}
