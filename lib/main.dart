@@ -1,5 +1,7 @@
 // ignore_for_file: avoid_print
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:todo/createTodo.dart';
 import 'package:todo/custom.dart';
@@ -74,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // print(newTask);
     // print(tasks);
     setState(() {
-      tasks.add(newTask);
+      tasks.insert(0,newTask);
     });
     // print(tasks);
   }
@@ -186,14 +188,14 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         padding: const EdgeInsets.all(15.0),
         child: Column(
-          
           children: <Widget>[
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   AppLocalizations.of(context)!.welcome_message("Joy"),
-                  style:const TextStyle(fontWeight: FontWeight.w900, fontSize: 30),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w900, fontSize: 30),
                 ),
                 // checking
                 sizedHeightBox(),
@@ -269,13 +271,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         sizedWidthBox(),
                       ]),
                 ),
-               
+
                 sizedHeightBox(),
                 textDull(AppLocalizations.of(context)!.task_title),
                 sizedHeightBox()
               ],
             ),
-            TodosList(tasks:tasks),
+            TodosList(tasks: tasks),
           ],
         ),
       ),

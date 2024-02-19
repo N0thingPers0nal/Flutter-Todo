@@ -14,6 +14,7 @@ class CreateTodo extends StatefulWidget {
 
 class _CreateTodoState extends State<CreateTodo> {
   TextEditingController newTaskController = TextEditingController();
+  FocusNode myfocus = FocusNode();
   // void _addTodo(Map<String, dynamic> newTask) {
   //   setState(() {
   //     allTasks.add(newTask);
@@ -53,6 +54,7 @@ class _CreateTodoState extends State<CreateTodo> {
                 controller: newTaskController,
                 style: const TextStyle(fontSize: 30),
                 cursorColor: Colors.blue,
+                focusNode: myfocus,
                 autofocus: true,
                 decoration: InputDecoration(
                   hintText: AppLocalizations.of(context)!.new_task_text_field,
@@ -155,8 +157,15 @@ class _CreateTodoState extends State<CreateTodo> {
                   newTaskController.clear();
 
                   Navigator.pop(context);
-                } 
-                else { var emptyField=SnackBar(content: Text(AppLocalizations.of(context)!.emptyField));ScaffoldMessenger.of(context).showSnackBar(emptyField);}
+                } else {
+                  var emptyField = SnackBar(
+                    backgroundColor: Colors.red,
+                    content: Text(AppLocalizations.of(context)!.emptyField,
+                        style: TextStyle(fontSize: 22)),
+                  );  
+                  ScaffoldMessenger.of(context).showSnackBar(emptyField);
+                  myfocus.requestFocus();
+                }
               },
               child: Wrap(
                 spacing: 3,
